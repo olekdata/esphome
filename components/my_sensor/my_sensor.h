@@ -1,6 +1,11 @@
 #pragma once
 
-#include "esphome.h"
+#include "esphome/core/component.h"
+#include "esphome/components/sensor/sensor.h"
+
+namespace esphome {
+namespace me_sensor {
+
 
 class MySensor : public PollingComponent, public sensor::Sensor {
 public:
@@ -16,3 +21,6 @@ public:
         publish_state(temperature);
     }
 };
+
+}
+}
