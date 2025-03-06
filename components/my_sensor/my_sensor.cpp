@@ -3,7 +3,7 @@
 namespace esphome {
 namespace my_sensor {
 // Konstruktor inicjalizuje PollingComponent (np. odczyt co 5 sekund)
-MySensor::MySensor(uint32_t update_interval) : PollingComponent(update_interval){
+MySensor::MySensor(uint32_t update_interval) : PollingComponent(update_interval) : Sensor(){
 	
 }
 
