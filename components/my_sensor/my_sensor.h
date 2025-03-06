@@ -1,25 +1,12 @@
-#pragma once
+pragma once
 
-#include "esphome/core/component.h"
-#include "esphome/components/sensor/sensor.h"
-
-namespace esphome {
-namespace me_sensor {
-
+#include "esphome.h"
 
 class MySensor : public PollingComponent, public sensor::Sensor {
 public:
-    
-    void setup() override {
-        ESP_LOGD("my_sensor", "Inicjalizacja czujnika");
-    }
+    // Konstruktor z czasem odczytu w milisekundach
+    MySensor(uint32_t update_interval = 5000);
 
-    void update() override {
-        float temperature = random(2000, 3000) / 100.0;  // Losowa temp. 20-30°C
-        ESP_LOGD("my_sensor", "Nowa temperatura: %.2f°C", temperature);
-        publish_state(temperature);
-    }
+    void setup() override;   // Inicjalizacja komponentu
+    void update() override;  // Odczyt danych i aktualizacja wartości
 };
-
-}
-}
