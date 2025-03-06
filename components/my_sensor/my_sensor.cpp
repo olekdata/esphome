@@ -10,11 +10,7 @@ MySensor::MySensor(uint32_t update_interval) : PollingComponent(update_interval)
  
 void MySensor::setup() {
     ESP_LOGD("my_sensor", "Inicjalizacja niestandardowego czujnika.");
-
 }
-
-
-
 
 void MySensor::update() {
     // Symulacja odczytu temperatury (losowa wartość 20-30°C)
@@ -23,6 +19,12 @@ void MySensor::update() {
     ESP_LOGD("my_sensor", "Nowa wartość: %.2f°C", temperature);
     publish_state(temperature);  // Wysłanie wartości do ESPHome
 }
+
+void MySensor::loop() {
+    ESP_LOGD("my_sensor", "loop");
+
+}
+
 
 }
 }
