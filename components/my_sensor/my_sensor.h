@@ -9,8 +9,7 @@ namespace me_sensor {
 
 class MySensor : public PollingComponent, public sensor::Sensor {
 public:
-    MySensor() : PollingComponent(5000) {}  // Odczyt co 5 sekund
-
+    
     void setup() override {
         ESP_LOGD("my_sensor", "Inicjalizacja czujnika");
     }
