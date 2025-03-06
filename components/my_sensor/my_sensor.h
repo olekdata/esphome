@@ -2,7 +2,7 @@
 
 #include "esphome.h"
 
-!!! ma być błąd
+//!!! ma być błąd
 
 class MySensor : public PollingComponent, public sensor::Sensor {
 public:
