@@ -3,6 +3,9 @@
 #include "esphome/core/component.h"
 #include "esphome/components/sensor/sensor.h"
 
+namespace esphome {
+namespace my_sensor {
+	
 class MySensor : public PollingComponent, public sensor::Sensor {
 public:
     // Konstruktor z czasem odczytu w milisekundach
@@ -11,3 +14,6 @@ public:
     void setup() override;   // Inicjalizacja komponentu
     void update() override;  // Odczyt danych i aktualizacja wartości
 };
+
+}
+}

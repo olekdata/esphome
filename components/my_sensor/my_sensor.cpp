@@ -1,5 +1,7 @@
 #include "my_sensor.h"
 
+namespace esphome {
+namespace my_sensor {
 // Konstruktor inicjalizuje PollingComponent (np. odczyt co 5 sekund)
 MySensor::MySensor(uint32_t update_interval) : PollingComponent(update_interval) {}
 
@@ -13,4 +15,7 @@ void MySensor::update() {
     
     ESP_LOGD("my_sensor", "Nowa wartość: %.2f°C", temperature);
     publish_state(temperature);  // Wysłanie wartości do ESPHome
+}
+
+}
 }
