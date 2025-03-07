@@ -20,11 +20,9 @@ void MySensor::update() {
     publish_state(temperature);  // Wysłanie wartości do ESPHome
 }
 
-void MySensor::loop() {
-    ESP_LOGD("my_sensor", "loop");
-
-}
-
+//void MySensor::loop() {
+//    ESP_LOGD("my_sensor", "loop");
+//}
 
 }
 }

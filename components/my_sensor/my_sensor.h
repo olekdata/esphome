@@ -13,7 +13,7 @@ public:
 	
     void setup() override;   // Inicjalizacja komponentu
     void update() override;  // Odczyt danych i aktualizacja wartości
-	void loop() override;
+//	void loop() override;
 	
 };
 
