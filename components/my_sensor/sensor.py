@@ -4,7 +4,7 @@ from esphome.components import sensor
 from esphome.const import CONF_ID, UNIT_CELSIUS, DEVICE_CLASS_TEMPERATURE, STATE_CLASS_MEASUREMENT
 
 my_sensor_ns = cg.esphome_ns.namespace('my_sensor')
-MySensor = my_sensor_ns.class_('MySensor', sensor.Sensor, cg.PollingComponent))
+MySensor = my_sensor_ns.class_('MySensor', sensor.Sensor, cg.PollingComponent)
 
 CONFIG_SCHEMA = sensor.sensor_schema(
     MySensor,
